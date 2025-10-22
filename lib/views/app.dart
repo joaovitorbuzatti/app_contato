@@ -17,6 +17,7 @@ class ContatoApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ContatoViewModel(ContatoApiRepository())..read(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         routes: {
           '/lista': (context) => const ListaPage(),
           '/novo': (context) => NovoPage(),
